@@ -29,7 +29,6 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:kicadlib
-LIBS:picUsbProg-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -44,99 +43,34 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L USB-micro-ab J2
-U 1 1 5638D51B
-P 6350 4750
-F 0 "J2" H 6350 4150 60  0000 C CNN
-F 1 "USB-micro-ab" H 6350 5400 60  0000 C CNN
-F 2 "" H 6350 4750 60  0000 C CNN
-F 3 "" H 6350 4750 60  0000 C CNN
-	1    6350 4750
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	5150 4350 6050 4350
-Wire Wire Line
-	5250 4500 6050 4500
-Wire Wire Line
-	5050 4650 6050 4650
-Wire Wire Line
-	5350 4800 6050 4800
-$Comp
-L GND #PWR4
-U 1 1 5638DD9A
-P 5950 5200
-F 0 "#PWR4" H 5950 4950 50  0001 C CNN
-F 1 "GND" H 5950 5050 50  0000 C CNN
-F 2 "" H 5950 5200 60  0000 C CNN
-F 3 "" H 5950 5200 60  0000 C CNN
-	1    5950 5200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 4950 5950 4950
-Wire Wire Line
-	5950 4950 5950 5200
-Wire Wire Line
-	6050 5100 5950 5100
-Connection ~ 5950 5100
-$Comp
-L PICKIT_HDR U2
-U 1 1 5638E1BF
-P 4850 4700
-F 0 "U2" H 4450 4150 60  0000 C CNN
-F 1 "PICKIT_HDR" H 4450 5200 60  0000 C CNN
-F 2 "" H 4850 4700 60  0000 C CNN
-F 3 "" H 4850 4700 60  0000 C CNN
-	1    4850 4700
-	1    0    0    -1  
-$EndComp
-Text Label 6000 4800 2    60   ~ 0
+Text Label 4950 5500 0    60   ~ 0
 icspclk/swdclk
-Text Label 6000 4650 2    60   ~ 0
+Text Label 4950 4900 0    60   ~ 0
 mclr/nreset
-Text Label 6000 4500 2    60   ~ 0
+Text Label 4950 5350 0    60   ~ 0
 icspdat/swdio
-Text Label 6000 4350 2    60   ~ 0
-vbus
+Text Label 4950 5050 0    60   ~ 0
+vcc
 $Comp
-L GND #PWR3
+L GND #PWR01
 U 1 1 5638E250
-P 4950 5200
-F 0 "#PWR3" H 4950 4950 50  0001 C CNN
-F 1 "GND" H 4950 5050 50  0000 C CNN
-F 2 "" H 4950 5200 60  0000 C CNN
-F 3 "" H 4950 5200 60  0000 C CNN
-	1    4950 5200
+P 4900 5750
+F 0 "#PWR01" H 4900 5500 50  0001 C CNN
+F 1 "GND" H 4900 5600 50  0000 C CNN
+F 2 "" H 4900 5750 60  0000 C CNN
+F 3 "" H 4900 5750 60  0000 C CNN
+	1    4900 5750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4850 4650 4950 4650
-NoConn ~ 4850 5100
+	4850 5200 4900 5200
 Wire Wire Line
-	5050 4650 5050 4350
-Wire Wire Line
-	5050 4350 4850 4350
-Wire Wire Line
-	4850 4500 5150 4500
-Wire Wire Line
-	5150 4500 5150 4350
-Wire Wire Line
-	4850 4800 5250 4800
-Wire Wire Line
-	5250 4800 5250 4500
-Wire Wire Line
-	5350 4800 5350 4950
-Wire Wire Line
-	5350 4950 4850 4950
-Wire Wire Line
-	4950 4650 4950 5200
+	4900 5200 4900 5750
 $Comp
-L ARM_10PIN J1
+L ARM_10PIN J2
 U 1 1 5638E4A4
 P 4450 2850
-F 0 "J1" H 4450 1850 60  0000 C CNN
+F 0 "J2" H 4450 1850 60  0000 C CNN
 F 1 "ARM_10PIN" H 4450 3500 60  0000 C CNN
 F 2 "" H 4450 2850 60  0000 C CNN
 F 3 "" H 4450 2850 60  0000 C CNN
@@ -144,10 +78,10 @@ F 3 "" H 4450 2850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR2
+L GND #PWR02
 U 1 1 5638E672
 P 5000 3800
-F 0 "#PWR2" H 5000 3550 50  0001 C CNN
+F 0 "#PWR02" H 5000 3550 50  0001 C CNN
 F 1 "GND" H 5000 3650 50  0000 C CNN
 F 2 "" H 5000 3800 60  0000 C CNN
 F 3 "" H 5000 3800 60  0000 C CNN
@@ -155,7 +89,7 @@ F 3 "" H 5000 3800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4900 3550 5000 3550
+	5000 3550 4900 3550
 Wire Wire Line
 	5000 2650 5000 3800
 Wire Wire Line
@@ -164,11 +98,8 @@ Connection ~ 5000 3550
 Wire Wire Line
 	4900 2650 5000 2650
 Connection ~ 5000 2950
-NoConn ~ 4950 3100
 NoConn ~ 4900 3250
 NoConn ~ 4950 3400
-Text Label 5050 2350 0    60   ~ 0
-vbus
 Text Label 5050 2500 0    60   ~ 0
 icspdat/swdio
 Text Label 5050 2800 0    60   ~ 0
@@ -183,46 +114,161 @@ Wire Wire Line
 	4950 2500 5050 2500
 Wire Wire Line
 	5050 2350 4900 2350
-$Comp
-L ARM_NOAH_5PIN U1
-U 1 1 5638EC7B
-P 5050 1250
-F 0 "U1" H 4650 700 60  0000 C CNN
-F 1 "ARM_NOAH_5PIN" H 4650 1600 60  0000 C CNN
-F 2 "" H 5050 1250 60  0000 C CNN
-F 3 "" H 5050 1250 60  0000 C CNN
-	1    5050 1250
-	1    0    0    -1  
-$EndComp
-Text Label 5150 1050 0    60   ~ 0
-vbus
-Text Label 5150 1200 0    60   ~ 0
+Text Label 7550 4550 0    60   ~ 0
 icspdat/swdio
-Text Label 5150 1350 0    60   ~ 0
+Text Label 7550 4700 0    60   ~ 0
 icspclk/swdclk
-Text Label 5150 1500 0    60   ~ 0
+Text Label 7550 4850 0    60   ~ 0
 mclr/nreset
 $Comp
-L GND #PWR1
+L GND #PWR03
 U 1 1 5638EF5C
-P 5150 1750
-F 0 "#PWR1" H 5150 1500 50  0001 C CNN
-F 1 "GND" H 5150 1600 50  0000 C CNN
-F 2 "" H 5150 1750 60  0000 C CNN
-F 3 "" H 5150 1750 60  0000 C CNN
-	1    5150 1750
+P 7550 5100
+F 0 "#PWR03" H 7550 4850 50  0001 C CNN
+F 1 "GND" H 7550 4950 50  0000 C CNN
+F 2 "" H 7550 5100 60  0000 C CNN
+F 3 "" H 7550 5100 60  0000 C CNN
+	1    7550 5100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5150 1750 5150 1650
+	7550 5100 7550 5000
 Wire Wire Line
-	5150 1650 5050 1650
+	7550 5000 7450 5000
 Wire Wire Line
-	5050 1500 5150 1500
+	7450 4850 7550 4850
 Wire Wire Line
-	5150 1050 5050 1050
+	7550 4400 7450 4400
 Wire Wire Line
-	5050 1200 5150 1200
+	7450 4550 7550 4550
 Wire Wire Line
-	5150 1350 5050 1350
+	7550 4700 7450 4700
+Text Label 5050 2350 0    60   ~ 0
+vcc
+Text Label 7550 4400 0    60   ~ 0
+vcc
+Wire Wire Line
+	4950 5500 4850 5500
+Wire Wire Line
+	4950 5350 4850 5350
+Wire Wire Line
+	4950 5050 4850 5050
+Wire Wire Line
+	4950 4900 4850 4900
+Text Label 5050 3100 0    60   ~ 0
+swo/lvp
+Wire Wire Line
+	5050 3100 4950 3100
+$Comp
+L ARM_NOAH_5PIN J3
+U 1 1 563A3135
+P 7450 4600
+F 0 "J3" H 7050 4050 60  0000 C CNN
+F 1 "ARM_NOAH_5PIN" H 7050 4950 60  0000 C CNN
+F 2 "" H 7450 4600 60  0000 C CNN
+F 3 "" H 7450 4600 60  0000 C CNN
+	1    7450 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L PICKIT_HDR J4
+U 1 1 563A32E2
+P 4850 5250
+F 0 "J4" H 4450 4700 60  0000 C CNN
+F 1 "PICKIT_HDR" H 4450 5750 60  0000 C CNN
+F 2 "" H 4850 5250 60  0000 C CNN
+F 3 "" H 4850 5250 60  0000 C CNN
+	1    4850 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L ARM_NOAH_6PIN J1
+U 1 1 563A335E
+P 7400 2700
+F 0 "J1" H 7050 2000 60  0000 C CNN
+F 1 "ARM_NOAH_6PIN" H 7050 3050 60  0000 C CNN
+F 2 "" H 7400 2700 60  0000 C CNN
+F 3 "" H 7400 2700 60  0000 C CNN
+	1    7400 2700
+	1    0    0    -1  
+$EndComp
+Text Notes 4200 2000 0    60   ~ 0
+Cortex 10-Pin
+Text Notes 4250 4550 0    60   ~ 0
+PIC 6-Pin
+Text Label 4950 5650 0    60   ~ 0
+swo/lvp
+Wire Wire Line
+	4850 5650 4950 5650
+Text Label 7500 3250 0    60   ~ 0
+swo/lvp
+Text Label 7500 2650 0    60   ~ 0
+icspdat/swdio
+Text Label 7500 2800 0    60   ~ 0
+icspclk/swdclk
+Text Label 7500 2950 0    60   ~ 0
+mclr/nreset
+Text Label 7500 2500 0    60   ~ 0
+vcc
+$Comp
+L GND #PWR04
+U 1 1 563A34DE
+P 7450 3350
+F 0 "#PWR04" H 7450 3100 50  0001 C CNN
+F 1 "GND" H 7450 3200 50  0000 C CNN
+F 2 "" H 7450 3350 60  0000 C CNN
+F 3 "" H 7450 3350 60  0000 C CNN
+	1    7450 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 3350 7450 3100
+Wire Wire Line
+	7450 3100 7400 3100
+Wire Wire Line
+	7400 3250 7500 3250
+Wire Wire Line
+	7500 2950 7400 2950
+Wire Wire Line
+	7400 2800 7500 2800
+Wire Wire Line
+	7500 2650 7400 2650
+Wire Wire Line
+	7400 2500 7500 2500
+Text Notes 6900 2150 0    60   ~ 0
+JST 6-Pin
+Text Notes 6900 4050 0    60   ~ 0
+JST 5-Pin
+Wire Notes Line
+	3900 1800 3900 4100
+Wire Notes Line
+	3900 4100 5900 4100
+Wire Notes Line
+	5900 4100 5900 1800
+Wire Notes Line
+	5900 1800 3900 1800
+Wire Notes Line
+	4000 4350 5750 4350
+Wire Notes Line
+	5750 4350 5750 6050
+Wire Notes Line
+	5750 6050 4000 6050
+Wire Notes Line
+	4000 6050 4000 4350
+Wire Notes Line
+	6550 3850 8350 3850
+Wire Notes Line
+	8350 3850 8350 5400
+Wire Notes Line
+	8350 5400 6550 5400
+Wire Notes Line
+	6550 5400 6550 3850
+Wire Notes Line
+	6550 1900 6550 3650
+Wire Notes Line
+	6550 3650 8350 3650
+Wire Notes Line
+	8350 3650 8350 1900
+Wire Notes Line
+	8350 1900 6550 1900
 $EndSCHEMATC
