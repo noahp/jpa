@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:/Users/npendlet/Desktop/misc/temp/jpa/kicad/jpa.sch)
-    (date "11/10/2015 10:05:29 AM")
+    (date "11/10/2015 11:47:12 AM")
     (tool "Eeschema 4.0.0-rc2-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -17,11 +17,13 @@
   (components
     (comp (ref J2)
       (value ARM_10PIN)
+      (footprint kicadlib:ARM_10_PIN)
       (libsource (lib kicadlib) (part ARM_10PIN))
       (sheetpath (names /) (tstamps /))
       (tstamp 5638E4A4))
     (comp (ref J3)
       (value ARM_NOAH_5PIN)
+      (footprint kicadlib:SMD_JST_5_PIN_VERT)
       (libsource (lib kicadlib) (part ARM_NOAH_5PIN))
       (sheetpath (names /) (tstamps /))
       (tstamp 563A3135))
@@ -32,6 +34,7 @@
       (tstamp 563A32E2))
     (comp (ref J1)
       (value ARM_NOAH_6PIN)
+      (footprint kicadlib:SMD_JST_6_PIN_VERT)
       (libsource (lib kicadlib) (part ARM_NOAH_6PIN))
       (sheetpath (names /) (tstamps /))
       (tstamp 564209BA)))
@@ -85,7 +88,7 @@
         (pin (num 6) (name LVP) (type input)))))
   (libraries
     (library (logical kicadlib)
-      (uri kicadlib\kicadlib.lib)))
+      (uri C:\Users\npendlet\Desktop\misc\temp\jpa\kicad\kicadlib\kicadlib.lib)))
   (nets
     (net (code 1) (name /swo/lvp)
       (node (ref J4) (pin 6))
