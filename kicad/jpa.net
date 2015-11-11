@@ -1,8 +1,8 @@
 (export (version D)
   (design
-    (source C:/Users/npendlet/Desktop/misc/temp/jpa/kicad/jpa.sch)
-    (date "11/10/2015 11:47:12 AM")
-    (tool "Eeschema 4.0.0-rc2-stable")
+    (source C:/dev/jpa/kicad/jpa.sch)
+    (date "11/10/2015 9:56:54 PM")
+    (tool "Eeschema 4.0.0-rc1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title)
@@ -29,6 +29,7 @@
       (tstamp 563A3135))
     (comp (ref J4)
       (value PICKIT_HDR)
+      (footprint kicadlib:TH_6X1_HDR)
       (libsource (lib kicadlib) (part PICKIT_HDR))
       (sheetpath (names /) (tstamps /))
       (tstamp 563A32E2))
@@ -39,21 +40,6 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 564209BA)))
   (libparts
-    (libpart (lib kicadlib) (part ARM_10PIN)
-      (fields
-        (field (name Reference) J)
-        (field (name Value) ARM_10PIN))
-      (pins
-        (pin (num 1) (name VCC) (type input))
-        (pin (num 2) (name SWDIO/TMS) (type input))
-        (pin (num 3) (name GND) (type input))
-        (pin (num 4) (name SWCLK/TCLK) (type input))
-        (pin (num 5) (name GND) (type input))
-        (pin (num 6) (name SWO/TDO) (type input))
-        (pin (num 7) (name RTCK) (type input))
-        (pin (num 8) (name NC-EXTb/TDI) (type input))
-        (pin (num 9) (name GND) (type input))
-        (pin (num 10) (name nRESET) (type input))))
     (libpart (lib kicadlib) (part ARM_NOAH_5PIN)
       (fields
         (field (name Reference) J)
@@ -85,10 +71,25 @@
         (pin (num 3) (name Vss) (type input))
         (pin (num 4) (name ICSPDAT) (type input))
         (pin (num 5) (name ICSPCLK) (type input))
-        (pin (num 6) (name LVP) (type input)))))
+        (pin (num 6) (name LVP) (type input))))
+    (libpart (lib kicadlib) (part ARM_10PIN)
+      (fields
+        (field (name Reference) J)
+        (field (name Value) ARM_10PIN))
+      (pins
+        (pin (num 1) (name VCC) (type input))
+        (pin (num 2) (name SWDIO/TMS) (type input))
+        (pin (num 3) (name GND) (type input))
+        (pin (num 4) (name SWCLK/TCLK) (type input))
+        (pin (num 5) (name GND) (type input))
+        (pin (num 6) (name SWO/TDO) (type input))
+        (pin (num 7) (name RTCK) (type input))
+        (pin (num 8) (name NC-EXTb/TDI) (type input))
+        (pin (num 9) (name GND) (type input))
+        (pin (num 10) (name nRESET) (type input)))))
   (libraries
     (library (logical kicadlib)
-      (uri C:\Users\npendlet\Desktop\misc\temp\jpa\kicad\kicadlib\kicadlib.lib)))
+      (uri kicadlib\kicadlib.lib)))
   (nets
     (net (code 1) (name /swo/lvp)
       (node (ref J4) (pin 6))
